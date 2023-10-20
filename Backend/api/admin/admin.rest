@@ -1,0 +1,47 @@
+@host=http://localhost:8080/api/v1/admin
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMyMzNmNjA1MDViYmVkZDFhYTExNmMiLCJpYXQiOjE2OTc4MTQ0OTMsImV4cCI6MTY5ODQxOTI5M30.5os0OeKqjVnv_IHo_ustQhW0XZm5ddhuuqli3unm8Jk
+POST {{host}}/addProduct
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Mosquitoes",
+  "category": "Insects",
+  "price": 632,
+  "desc": "Hey Product",
+  "size":  "M",
+  "color": "Blue"
+}
+
+###
+GET {{host}}/getAllProductsByAdmin
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{host}}/getProductById/6532a138872028232195ec23
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+### 
+PUT {{host}}/updateProductDetails
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": "6532a138872028232195ec23",
+  "name": "MyShop",
+  "category": "Hair Cutting",
+  "price": 833,
+  "desc": "Hey Product",
+  "size":  "M",
+  "color": "Blue"
+}
+
+
+
+###
+GET {{host}}/getAllUsers
+Content-Type: application/json
+Authorization: Bearer {{token}}

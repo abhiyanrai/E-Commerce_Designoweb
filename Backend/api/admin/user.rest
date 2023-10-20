@@ -1,0 +1,7 @@
+@host=http://localhost:8080/api/v1/user
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTMyMzNmNjA1MDViYmVkZDFhYTExNmMiLCJpYXQiOjE2OTc4MTQ0OTMsImV4cCI6MTY5ODQxOTI5M30.5os0OeKqjVnv_IHo_ustQhW0XZm5ddhuuqli3unm8Jk
+
+###
+GET {{host}}/getAllProducts
+Content-Type: application/json
+Authorization: Bearer {{token}}
